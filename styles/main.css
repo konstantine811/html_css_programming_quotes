@@ -1,28 +1,15 @@
-/* reset styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+@import "./_reset.css";
+
+:root {
+  --white: #eceff4;
+  --card-img-width: 200px;
+}
+
 body {
-  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-* {
-  color: white;
-  box-sizing: border-box;
-}
 /* reset styles ends */
 /* global styles */
 .page-wrap {
@@ -35,17 +22,57 @@ ul {
 .container {
   max-width: 990px;
   margin: 0 auto;
-  padding: 0 25px;
   box-sizing: content-box;
   width: 100%;
 }
+
 /* global styles end */
 /* typography */
 .h1 {
   font-size: 35px;
   text-transform: uppercase;
+  color: var(--white);
+  line-height: 45px;
 }
+
+.txt-sm {
+  font-size: 12px;
+  color: var(--white);
+}
+
+/* color txt */
 .txt-yellow {
   color: #e5b828;
 }
+
+.txt-pink {
+  color: #e842d1;
+}
 /* typography end */
+
+/* wraper */
+
+.title {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-img {
+  background-color: white;
+  width: var(--card-img-width);
+  height: var(--card-img-width);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.card-item {
+  box-shadow: 8px 7px 14px 0px black, inset 9px -7px 16px -10px black;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
