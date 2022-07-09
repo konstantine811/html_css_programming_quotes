@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: white;
 }
 
 /* reset styles ends */
@@ -62,17 +63,35 @@ body {
   background-color: white;
   width: var(--card-img-width);
   height: var(--card-img-width);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid yellow;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;
 }
 
 .card-item {
-  box-shadow: 8px 7px 14px 0px black, inset 9px -7px 16px -10px black;
+  box-shadow: 4px 4px 4px 0px black, inset 0px 1px 5px -3px white;
   padding: 20px;
   margin: 20px 0;
   border-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  transition: transform 0.3s cubic-bezier(1, -0.37, 0.98, 0.97);
+}
+
+.card-item:hover {
+  transform: translate(-10px, -10px) rotate(0deg) scale(1.01) skew(0deg, 0deg);
+}
+
+.card-txt {
+  width: calc(100% - var(--card-img-width) - 20px);
+  text-align: right;
 }
